@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+*.pyc
+task-definition.json
+ecs-trust-policy.json

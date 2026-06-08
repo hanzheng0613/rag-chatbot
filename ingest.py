@@ -14,7 +14,7 @@ REGION        = os.getenv("AWS_REGION", "us-east-1")
 OS_HOST       = os.getenv("OPENSEARCH_HOST")          # no trailing slash
 OS_INDEX      = os.getenv("OPENSEARCH_INDEX", "rag-documents")
 OS_USER       = os.getenv("OPENSEARCH_USER", "hanzheng0613")
-OS_PASS       = os.getenv("OPENSEARCH_PASS", "Whz123456.")
+OS_PASS       = os.getenv("OPENSEARCH_PASS")
 
 # --- Bedrock embeddings (Titan Embeddings V2) ---
 embeddings = BedrockEmbeddings(
