@@ -1,0 +1,36 @@
+{
+  "family": "rag-chatbot",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::938395539014:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::938395539014:role/ecsTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "rag-chatbot",
+      "image": "938395539014.dkr.ecr.us-east-1.amazonaws.com/rag-chatbot:latest",
+      "portMappings": [
+        {
+          "containerPort": 8501,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {"name": "AWS_REGION", "value": "us-east-1"},
+        {"name": "OPENSEARCH_INDEX", "value": "rag-documents"},
+        {"name": "OPENSEARCH_USER", "value": "hanzheng0613"},
+        {"name": "OPENSEARCH_HOST", "value": "https://search-hanzheng0613domain-vj3qnvgo4mk7ztv42veyl2jeq4.us-east-1.es.amazonaws.com"},
+        {"name": "OPENSEARCH_PASS", "value": "Whz123456."}
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/rag-chatbot",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

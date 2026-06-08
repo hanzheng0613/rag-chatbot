@@ -1,0 +1,10 @@
+langchain-community
+langchain-core
+langchain-aws
+langchain-text-splitters
+langchain-classic
+opensearch-py
+boto3
+python-dotenv
+streamlit
+pypdf
