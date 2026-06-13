@@ -1,4 +1,4 @@
-# 📄 RAG Chatbot — AWS Bedrock + OpenSearch + Streamlit
+# RAG Chatbot — AWS Bedrock + OpenSearch + Streamlit
 
 A Retrieval-Augmented Generation (RAG) chatbot that lets you upload PDF documents and ask questions about their content. The app retrieves relevant document chunks from a vector database and uses Claude (via AWS Bedrock) to generate grounded, cited answers.
 
@@ -6,12 +6,12 @@ A Retrieval-Augmented Generation (RAG) chatbot that lets you upload PDF document
 
 ## Features
 
-- 📤 Upload PDFs directly from the chat interface
-- 🔍 Semantic search over document chunks using vector embeddings
-- 🤖 Conversational Q&A powered by Claude on AWS Bedrock
-- 📚 Source citations (document name + page number) for every answer
-- 🧠 Chat history-aware retrieval (follow-up questions work naturally)
-- 🐳 Containerized with Docker, deployable on AWS ECS Fargate
+- Upload PDFs directly from the chat interface
+- Semantic search over document chunks using vector embeddings
+- Conversational Q&A powered by Claude on AWS Bedrock
+- Source citations (document name + page number) for every answer
+- Chat history-aware retrieval (follow-up questions work naturally)
+- Containerized with Docker, deployable on AWS ECS Fargate
 
 ---
 
@@ -139,7 +139,7 @@ docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/rag-chatbot:latest
 http://<task_public_ip>:8501
 ```
 
-> ⚠️ Note: the public IP changes if the task restarts. For a stable URL, add an Application Load Balancer.
+> Note: the public IP changes if the task restarts. For a stable URL, add an Application Load Balancer.
 
 ---
 
